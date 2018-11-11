@@ -2,21 +2,21 @@
 #include <xc.h>
 
 //-----------------------------------------------------------
-typedef unsigned char uchar; 	// unsigned char を uchar に省略
-void initpic();  			    // PICマイコンの初期化
-void go(uchar);					//直進
-void stop(uchar);				//停止
-void turn_r(uchar);				//右回転
-void turn_l(uchar);				//左回転
-void led_g(uchar);				//LED 緑色
-void led_r(uchar);				//LED 赤色
-void led_off(uchar);			//LED 消灯
-void d_ms(uchar);				//__delay_ms()
-void set_TMR0();				//TMR0割り込み設定
-void Switch();					//スイッチ
-uchar button = 0;				//スイッチの初期値OFF
-void trace();					//トレース
-static void interrupt irq();    //割り込み
+typedef unsigned char uchar;  // unsigned char を uchar に省略
+void initpic();               // PICマイコンの初期化
+void go(uchar);	              //直進
+void stop(uchar);             //停止
+void turn_r(uchar);           //右回転
+void turn_l(uchar);           //左回転
+void led_g(uchar);            //LED 緑色
+void led_r(uchar);            //LED 赤色
+void led_off(uchar);          //LED 消灯
+void d_ms(uchar);             //__delay_ms()
+void set_TMR0();              //TMR0割り込み設定
+void Switch();                //スイッチ
+uchar button = 0;             //スイッチの初期値OFF
+void trace();                 //トレース
+static void interrupt irq();  //割り込み
 int i = 0;
 
 //-----------------------------------------------------------
