@@ -4,7 +4,7 @@
 //-----------------------------------------------------------
 typedef unsigned char uchar;  // unsigned char を uchar に省略
 void initpic();               // PICマイコンの初期化
-void go(uchar);	              //直進
+void go(uchar);               //直進
 void stop(uchar);             //停止
 void turn_r(uchar);           //右回転
 void turn_l(uchar);           //左回転
