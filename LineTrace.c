@@ -157,10 +157,10 @@ void Switch(){
 
 //タイマ０割り込み設定--------------------------------------------
 void set_TMR0(){
-	OPTION_REG = 0b11000111;	//下位3bitでプリスケーラを指定
-	TMR0 = 6;									//TMRレジスタの初期設定
-	TMR0IE = 1;								//タイマ割り込み可能
-	GIE = 1;									//割り込み全体の許可
+	OPTION_REG = 0b11000111;  //下位3bitでプリスケーラを指定
+	TMR0 = 6;                 //TMRレジスタの初期設定
+	TMR0IE = 1;               //タイマ割り込み可能
+	GIE = 1;                  //割り込み全体の許可
 }
 
 //割り込みプログラム--------------------------------------------
@@ -182,10 +182,10 @@ void initpic(){
 
 	// PORTA, PORTB の初期化
 	ANSELA = 0x00;
-	ANSELB = 0x00;       					// Disable ADC
-	TRISA  = 0b11111111; __delay_ms(500);	// PICkit での ICSP 対策
-	TRISA  = 0b00111111;				    // RA7,6:MotorLR  RA5,4:Switch  RA3-0:Sensor
-	TRISB  = 0b00110000; 					// RB7,6:DynLEDHigh  RB5,4:ExtBoard  RB3-0:DynLEDLow
+	ANSELB = 0x00;                        // Disable ADC
+	TRISA  = 0b11111111; __delay_ms(500); // PICkit での ICSP 対策
+	TRISA  = 0b00111111;                  // RA7,6:MotorLR  RA5,4:Switch  RA3-0:Sensor
+	TRISB  = 0b00110000;                  // RB7,6:DynLEDHigh  RB5,4:ExtBoard  RB3-0:DynLEDLow
 
 	// 出力値の初期化
 	PORTA  = 0b00000000; // Motor Off
